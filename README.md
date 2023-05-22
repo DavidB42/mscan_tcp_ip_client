@@ -1,6 +1,7 @@
 # mscan_tcp_ip_client
 
-author: David Burkhardt, CIN, AG Arrenberg, Tuebingen University
+author: David Burkhardt, CIN, AG Arrenberg, Tuebingen University.
+
 date: 2023/05/22
 
 ## general
