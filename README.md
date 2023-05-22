@@ -9,4 +9,4 @@ The client is called via a MScan VB script as a Microsoft Automation Server. The
 ## Add DLL to  windows registry
 - run a administrator-level command prompt
 - switch to the directory containing the the binary files (.dll)
-- enter the command regsvr32 MScanHelper2.dll
+- enter the command <code>regsvr32 MScanHelper2.dll</code>
