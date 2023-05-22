@@ -5,27 +5,28 @@ Dim sout
 set sout = WScript.StdOut
 
 if autoHelper1 is nothing then
-	sout.Write "helper not found"
+	sout.WriteLine "helper not found"
 else
-      sout.Write "helper initialized"  
+      sout.WriteLine "helper initialized"  
   
       autoHelper1.ImageHeight = 2 ' UBound(frameData, 1) - LBound(frameData, 1) + 1          
       autoHelper1.ImageWidth  = 2 ' UBound(frameData, 2) - LBound(frameData, 2) + 1 
       Dim x
-      x = autoHelper1.InitStreamData()
+      autoHelper1.InitStreamData()
 
-      sout.Write "further steps..."
 end if
 
-Dim y
+Dim y, counter
+counter = 0
 
 WScript.Sleep(10000)
-sout.Write "sendFrame..."
-Do while True
-y = autoHelper1.SendFrame(2)
+Do while counter < 20
+autoHelper1.SendFrame(2)
 WScript.Sleep(500)
+sout.WriteLine "send round: " & counter
+counter = counter + 1
 Loop
 
-
+autoHelper1.EndStreamData()
 
 
