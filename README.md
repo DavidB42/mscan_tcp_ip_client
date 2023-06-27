@@ -24,7 +24,7 @@ Small python TCP/IP server for testing real-time frame reception from the MScan 
 
 ---
 ## General
-To etsablish TCP/IP connetion execute the following steps:
+To establish TCP/IP connetion execute the following steps:
 - disable both Kaspersky and Windows defender on your server computer
 - select a port between 49152 and 65535 via the client and enter the servers' IP address (IPv4)
 - enter the same port and the server's IP address on the server
