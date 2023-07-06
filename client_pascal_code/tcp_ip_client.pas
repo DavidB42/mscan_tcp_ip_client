@@ -23,7 +23,9 @@ type
     Edit2: TEdit;
     Label2: TLabel;
     Label3: TLabel;
+    Button1: TButton;
     procedure FormCreate(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender:TObject);
     procedure SendFrame(frameData, size: OleVariant);
@@ -48,6 +50,19 @@ procedure TForm1.FreeMemoryStream;
 begin
   m_stream.Clear;
   m_stream.Free;
+end;
+
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+  if IdTCPClient1.Connected then IdTCPClient1.Disconnect;
+    m_stream.Free;
+
+  //close form
+  try
+    ShowModal;
+  finally
+    Free;
+  end;
 end;
 
 procedure TForm1.Button2Click(Sender: TObject);
@@ -98,6 +113,13 @@ begin
 
   if IdTCPClient1.Connected then IdTCPClient1.Disconnect;
   m_stream.Free;
+
+  //close form
+  try
+    ShowModal;
+  finally
+    Free;
+  end;
 end;
 
 procedure TForm1.FormCreate(Sender: TObject);

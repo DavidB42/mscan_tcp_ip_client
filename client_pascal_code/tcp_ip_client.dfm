@@ -37,7 +37,7 @@ object Form1: TForm1
   object Label7: TLabel
     Left = 123
     Top = 135
-    Width = 43
+    Width = 3
     Height = 15
   end
   object Label2: TLabel
@@ -50,7 +50,7 @@ object Form1: TForm1
   object Label3: TLabel
     Left = 123
     Top = 156
-    Width = 43
+    Width = 3
     Height = 15
   end
   object Button2: TButton
@@ -86,6 +86,15 @@ object Form1: TForm1
     Height = 23
     TabOrder = 3
     Text = '40000'
+  end
+  object Button1: TButton
+    Left = 240
+    Top = 124
+    Width = 137
+    Height = 40
+    Caption = 'Close Client'
+    TabOrder = 4
+    OnClick = Button1Click
   end
   object IdTCPClient1: TIdTCPClient
     ConnectTimeout = 0
